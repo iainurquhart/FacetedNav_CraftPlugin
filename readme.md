@@ -15,6 +15,7 @@ In my example a valid urls can be
 /catalogue/plants/shrubs/sun/partial-shade|full-sun/soil/sandy-volcanic
 
 The end result when filters are active looks something like this:
+
 ![Faceted Navigation](https://s3.amazonaws.com/f.cl.ly/items/2N03250d202f0k1s3z2e/Image%202014-12-19%20at%204.30.09%20pm.png)
 
 ### Craft Setup
