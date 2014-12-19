@@ -4,7 +4,7 @@
 
 This plugin was quickly put together to assist in creating faceted navigation across single or multiple category groups.
 
-The following code examples will use an example use case of a Plant Nursery website that requires filtering plant type, soil type, and light exposure. Ultimately we want a url structure of:
+The following code examples will use an example use case of a Plant Nursery website that requires filtering of plant types, soil types, and light exposures. Ultimately we want a url structure of:
 
 category_group/category_1|category_2/category_group/category_1
 
@@ -15,7 +15,7 @@ The end result when filters are active looks something like this:
 
 ### Craft Setup
 
-1. I've created 3 category groups with the handles of 'plant', 'soil' and 'sun'. Those categories have each been assigned to a field and each assigned to the Section "Catalogue". 
+1. I've created 3 category groups with the handles of `plants`, `soil` and `sun`. Those categories have each been assigned to a field and each assigned to the section `catalogue`. 
 
 ![Categories](https://s3.amazonaws.com/f.cl.ly/items/3J120w0E3p301I1D2p0q/Image%202014-12-19%20at%2010.22.12%20pm.png)
 
@@ -23,17 +23,17 @@ Each have a maximum level set of 1 as that is a current limitation of the plugin
 
 2. I've created a template folder with an index in /craft/templates/catalogue for the front-end.
 
-3. In my `/craft/config/routes.php`, I've added `'catalogue/(.*?)' => 'catalogue/index'` as a route to put all requests no matter how many segments through to the /catalogue template.
+3. In my `/craft/config/routes.php`, I've added `'catalogue/(.*?)' => 'catalogue/index'` to push all requests no matter how many segments through to the /catalogue template.
 
 4. I've added a bunch of entries and classified them using the available category groups for testing :)
 
-5. Install the plugin and open your /craft/templates/catalogue/index
+5. Install the plugin and open /craft/templates/catalogue/index
 
 ### Craft Plugin Usage
 
-Calling the `getNav` allows you to render your navigation sets and output current filters, as well as build a parameter for your main `craft.entries` call when running the filters. 
+Calling `craft.facetedNav.getNav` allows you to render your navigation sets and output current filters, as well as build a parameter for your main `craft.entries` call when outputting your entries. 
 
-So start with a basic set tag, and pass an array of your category group handles to the plugin, and set a couple variables that will come in useful later.
+So start with a basic set tag, and pass an array of your category group *handles* to the plugin, and also set a couple variables that will come in useful later.
 
 	{% set navItems = craft.facetedNav.getNav(['plants', 'sun', 'soil']) %}
 	{% set relatedTo = '' %}
