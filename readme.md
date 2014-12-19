@@ -8,7 +8,11 @@ The following code examples will use an example use case of a Plant Nursery webs
 
 category_group/category_1|category_2/category_group/category_1
 
-In my example a valid url is /catalogue/plants/shrubs/sun/partial-shade|full-sun/soil/sandy-volcanic
+In my example a valid urls can be 
+
+/catalogue/sun/full-sun/soil/sandy-volcanic
+/catalogue/soil/sandy-volcanic|clay-based-loams
+/catalogue/plants/shrubs/sun/partial-shade|full-sun/soil/sandy-volcanic
 
 The end result when filters are active looks something like this:
 ![Faceted Navigation](https://s3.amazonaws.com/f.cl.ly/items/2N03250d202f0k1s3z2e/Image%202014-12-19%20at%204.30.09%20pm.png)
